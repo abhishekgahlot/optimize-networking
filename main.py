@@ -1,10 +1,12 @@
 import sh
 from sh import sudo
 
-### TCP Increase Segment size
-
-
 ### TCP Slow Start Optimization
+
+### TCP Increase Segment size for Kernel <= 2.6.39
+
+
+### Optimize Slow Start Restart
 sysctl = sh.Command('sysctl')
 tcp_slow_start = sysctl('net.ipv4.tcp_slow_start_after_idle').strip().replace(' ','')
 enabled_tcp_slow_start = 'net.ipv4.tcp_slow_start_after_idle=1'
