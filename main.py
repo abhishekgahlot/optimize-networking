@@ -1,7 +1,7 @@
 import sh
 from sh import sudo
 
-### TCP Increase TCP Segment size
+### TCP Increase Segment size
 
 
 ### TCP Slow Start Optimization
